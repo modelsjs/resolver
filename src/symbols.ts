@@ -1,0 +1,1 @@
+export const ResolveStrategy = Symbol('ResolveStrategy');
