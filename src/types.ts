@@ -9,11 +9,11 @@ export interface IResolver {
 }
 
 export interface ISyncResolver {
-    sync(models: Model[]): [ Model[], Model[] ];
+    sync(models: Model[]): [ Model[], Model[] ] | [ Model[] ];
 }
 
 export interface IAsyncResolver {
-    async(models: Model[]): Promise<[ Model[], Model[] ]>;
+    async(models: Model[]): Promise<[ Model[], Model[] ] | [ Model[] ]>;
 }
 
 export type TResolver = IResolver & OneOf<ISyncResolver & IAsyncResolver>;
